@@ -13,17 +13,29 @@ const Meditation = () => {
 
     // Read Aloud Affirmation
     const readAffirmation = () => {
-        const text = `Step 1: Grounding in the Present Moment. 
-        Take a deep breath in… and slowly breathe out.
-        Feel the gentle rhythm of your breath, the life force within you.
-        Right now, in this moment, you are safe, loved, and at peace.`;
-
+        const text = `My sweet child, I have always been with you.
+        You are never alone. You have done well, and you will continue to shine.
+        Surrender all your worries to me. Let me take care of everything.
+        You are free. You are light. You are loved. You are deeply loved, always protected, and eternally connected to Baba.`;
+    
         const speech = new SpeechSynthesisUtterance(text);
-        speech.lang = 'en-US';
-        speech.rate = 0.9;
-        speech.pitch = 1;
-        window.speechSynthesis.speak(speech);
+    
+        // Delay execution to ensure voices are loaded
+        setTimeout(() => {
+            const voices = window.speechSynthesis.getVoices();
+            
+            // Select an Indian Female Voice
+            speech.voice = voices.find(voice => voice.name.includes("Google English (India)")) 
+                         || voices.find(voice => voice.name.includes("Microsoft Heera"))
+                         || voices[0]; // Default to first available voice
+    
+            speech.rate = 0.9; // Slightly slower for a calming effect
+            speech.pitch = 1.2; // Softer and more relaxing voice tone
+    
+            window.speechSynthesis.speak(speech);
+        }, 200); // Delay to allow voices to load
     };
+    
 
     return (
         <div className="meditation-container">
@@ -36,11 +48,7 @@ const Meditation = () => {
                 <h3 className="timer-text">🕰 Meditation Timer: <span>4:26</span></h3>
 
                 <h3 className="section-title">🌿 Daily Affirmation</h3>
-                <p className="affirmation-text">
-                    🌟 Step 1: Grounding in the Present Moment  
-                    Take a deep breath in… and slowly breathe out.  
-                    Feel the gentle rhythm of your breath, the life force within you.  
-                    Right now, in this moment, you are safe, loved, and at peace.  
+                <p className="affirmation-text">My sweet child, I have always been with you.You are never alone. You have done well, and you will continue to shine. Surrender all your worries to me. Let me take care of everything. You are free. You are light. You are loved. You are deeply loved, always protected, and eternally connected to Baba.  
                 </p>
 
                 {/* Buttons */}
