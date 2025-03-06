@@ -1,38 +1,288 @@
-.App {
+/* Main App Container */
+.app-container {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #f5f5f5;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Main Heading */
+.main-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Card for Meditation */
+.meditation-card {
+  background: #fff;
+  padding: 25px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.meditation-card:hover {
+  transform: scale(1.02);
+}
+
+/* Title & Subtitles */
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Timer */
+.timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2b7a78;
+  margin-bottom: 15px;
+}
+
+/* Affirmation */
+.affirmation {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Play Music Button */
+.play-button {
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  background: linear-gradient(135deg, #ff5e62, #ff9966);
+  transform: scale(1.05);
+}
+
+/* Audio Player */
+audio {
+  margin-top: 15px;
+  width: 100%;
+}
+.read-button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.read-button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+/* Soft gradient background for a calming effect */
+.meditation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #D4FC79, #96E6A1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Centered, rounded meditation card */
+.meditation-card {
+  background: white;
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Smooth hover effect */
+.meditation-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Page Title */
+.app-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2C3E50;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #16A085;
+  margin-top: 15px;
+}
+
+/* Timer Text */
+.timer-text {
+  font-size: 18px;
+  color: #2C3E50;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Affirmation Text */
+.affirmation-text {
+  font-size: 16px;
+  color: #34495E;
+  line-height: 1.5;
+  padding: 15px;
+  background: #ECF0F1;
+  border-radius: 10px;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Buttons */
+.action-button {
+  border: none;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Read Button */
+.read-button {
+  background: #F39C12;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.read-button:hover {
+  background: #E67E22;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Play Button */
+.play-button {
+  background: #27AE60;
+  color: white;
+}
+
+.play-button:hover {
+  background: #2ECC71;
+}
+
+/* Audio Player Styling */
+.audio-player {
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 10px;
+}
+.meditation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.meditation-img {
+  width: 60%; /* Reduce width to 60% of container */
+  max-width: 300px; /* Set a max width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Add this to your App.css or Meditation.css */
+body {
+  background-image: url('/meditation-bg.jpg'); /* Ensure image is in the public folder */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.meditation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.meditation-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timer-text span {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.affirmation-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.button-group {
+  margin-top: 15px;
+}
+
+.action-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #388E3C;
+}
+
+.audio-player {
+  margin-top: 15px;
 }
