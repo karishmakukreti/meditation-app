@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+meditation-chatbot/venv
+
+meditation-chatbot/api_key.txt
+
+meditation-chatbot/data/english_murlis_html
